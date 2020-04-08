@@ -1,10 +1,10 @@
 // cara 1.
-// axios.get('http://localhost:3000/contacts')
-// .then((response)=>{
+// axios.get('http://localhost:3000/contacts')//paket get data (data berupa objek)
+// .then((response)=>{ //menerima data
 //     console.log(response)
 //     document.getElementById(`contacts`).innerHTML =''
 // })
-// .catch((response)=>{
+// .catch((response)=>{ //handle error
 //     console.error(pesanError);
 // })
 // document.getElementById('simpanContact').addEventListener('submit',function(event){
@@ -57,14 +57,14 @@ document.getElementById('simpanContact').addEventListener('click',function(event
 
 const name = document.getElementsByName('name').value;
 const age = document.getElementsByName('age').value;
-axios.post('http://localhost:3000/contacts', {
+axios.post('http://localhost:3000/contacts', { //input data
     name,
     age
 })
 })
 
 const hapus = id => {
-axios.delete(`http://localhost:3000/contacts/${id}`)
+axios.delete(`http://localhost:3000/contacts/${id}`) //hapus data
 }
 
 const ubah = id => {
@@ -75,7 +75,7 @@ const contact = data.find(item => {
 if (contact){
     const name = window.prompt('Name',contacts.name);
     const age = window.prompt('Age', contacts.age);
-    axios.put(`http://localhost:3000/contacts/${id}`,{
+    axios.put(`http://localhost:3000/contacts/${id}`,{ //update data, id untuk spesifik
         name,
         age
     });
