@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Evan",
+      "age": 18
+    },
+    {
+      "id": 2,
+      "name": "Ariq",
+      "age": 19
+    },
+    {
+      "id": 3,
+      "name": "Ozy",
+      "age": 19
+    }
+  ]
+}
